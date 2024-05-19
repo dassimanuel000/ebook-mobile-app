@@ -35,4 +35,33 @@ class AuthController extends GetxController {
     successMessage('Logout');
     Get.offAll(WelcomePage());
   }
+
+  Future<void> loginWithEmailAndPassword(String email, String password) async {
+    isLoading.value = true;
+    try {
+      await auth.signInWithEmailAndPassword(email: email, password: password);
+      successMessage('Login Success');
+      Get.offAll(HomePage());
+    } on FirebaseAuthException catch (e) {
+      print('Failed with error code: ${e.code}');
+      print(e.message);
+      errorMessage(e.code);
+    }
+    isLoading.value = false;
+  }
+
+  Future<void> signupWithEmailPassword(String email, String password) async {
+    isLoading.value = true;
+    try {
+      await auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      successMessage('SignUp Success');
+      Get.offAll(HomePage());
+    } on FirebaseAuthException catch (e) {
+      print('Failed with error code: ${e.code}');
+      print(e.message);
+      errorMessage(e.code);
+    }
+    isLoading.value = false;
+  }
 }

@@ -1,7 +1,10 @@
+import 'package:e_book/Pages/AuthPage/AuthPageBody.dart';
 import 'package:e_book/Pages/Homepage/HomePage.dart';
 import 'package:e_book/Pages/WelcomePage/WelcomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+
+import '../Pages/AuthPage/AuthPage.dart';
 
 class SplaceController extends GetxController {
   final auth = FirebaseAuth.instance;
@@ -17,7 +20,7 @@ class SplaceController extends GetxController {
       if (auth.currentUser != null) {
         Get.offAll(HomePage());
       } else {
-        Get.offAll(WelcomePage());
+        Get.offAll(AuthPage());
       }
     });
   }

@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
+import '../../../const.dart';
+
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
 
@@ -36,7 +38,8 @@ class HomeAppBar extends StatelessWidget {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Image.network(
-                      authController.auth.currentUser!.photoURL!))),
+                    authController.auth.currentUser!.photoURL ?? defaultProfile,
+                  ))),
         )
       ],
     );

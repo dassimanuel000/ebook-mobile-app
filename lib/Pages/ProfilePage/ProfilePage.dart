@@ -6,6 +6,7 @@ import 'package:e_book/Controller/AuthController.dart';
 import 'package:e_book/Controller/BookController.dart';
 import 'package:e_book/Models/Data.dart';
 import 'package:e_book/Pages/AddNewBook/AddNewBook.dart';
+import 'package:e_book/const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -85,7 +86,7 @@ class ProfilePage extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(100),
                             child: Image.network(
-                              "${authController.auth.currentUser!.photoURL}",
+                              "${authController.auth.currentUser!.photoURL ?? defaultProfile}",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -93,7 +94,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        "${authController.auth.currentUser!.displayName}",
+                        "${authController.auth.currentUser!.displayName ?? "Root User"}",
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             color: Theme.of(context).colorScheme.background),
                       ),

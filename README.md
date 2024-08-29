@@ -1,9 +1,5 @@
 
 # 📙 E Book App In Flutter
-This app is make for reading online e book i have made this app in flutter if you want to see all Tutorial of This App in video formate follow my.
-youtube channel ❤️ 
-<a href="https://www.github.com/MrNitishroy](https://mrnitishroy.github.io/)https://mrnitishroy.github.io](https://www.youtube.com/@flutterhero/videos" target="blank">FlutterHero</a>
-https://www.youtube.com/watch?v=4wOf50R2P9o&t=8147s&ab_channel=Flutterhero
 
 
 
@@ -57,11 +53,6 @@ https://www.youtube.com/watch?v=4wOf50R2P9o&t=8147s&ab_channel=Flutterhero
 
 ## Run Locally
 
-Clone the project
-
-```bash
-  git clone https://github.com/MrNitishroy/E-Book-app-In-Flutter
-```
 
 Open project in the vs code
 
@@ -81,5 +72,5 @@ run app
 
 ## Authors
 
-<a href="https://www.github.com/MrNitishroy](https://mrnitishroy.github.io/)https://mrnitishroy.github.io/" target="blank">Nitish Roy </a>
+
 

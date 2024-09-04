@@ -13,7 +13,7 @@
 
 **Client:** Flutter,Dart
 
-**Server:** Firebase , Dot net
+**Server:** Firebase , Dot net API REST
 
 ## Features
 
